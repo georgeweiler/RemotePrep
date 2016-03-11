@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<h1> Welcome to the webpage </h1>
+<div class="greeting"></div>
+<button class="button">Greeting</button>
+<button class="random">Random Sentence</button>
+
+
+<script>
+
+//EXERCISE 1
+	var date = function(){
+		console.log("hello, the date is: " + new Date());	
+	}
+	date();
+
+	var myFunc = function(){
+		var name = prompt("What is your name?")
+		var myString = "Hello " + name
+		$('.greeting').append("<p>" + myString + "</p>");
+	}
+	$('.button').click(myFunc);
+
+
+
+//EXERCISE 2
+
+
+var getSentence = function(){
+	var sentences = ["I like pizza.", "I want to go for a hike.", "JavaScript is fun!", "I hate functions."]
+	var randomNum;
+	function getRandomNumber(min, max){
+		 randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+	getRandomNumber(0,sentences.length - 1);
+	$('.greeting').append('<p>' + sentences[randomNum] + '</p>')
+	
+}
+
+$('.random').click(getSentence);
+
+//EXERCISE 3
+
+var log_and_return = function(){
+	console.log(arguments);
+	return arguments;
+}
+
+var returnedVals = log_and_return("hello", true);
+
+log_and_return(returnedVals);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
