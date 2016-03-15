@@ -11,3 +11,11 @@ body {
 footer {
 	background-color: #474028;
 }
+
+movie_img{
+	height: 80px;
+}
+.col-md-3{
+	height: 500px;
+}
+
